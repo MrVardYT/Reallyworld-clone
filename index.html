@@ -5,27 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReallyWorld</title>
     <style>
-        body { font-family: Arial; text-align: center; padding: 20px; }
-        img { max-width: 300px; margin: 10px; border: 2px solid #ccc; }
-        .missing { color: red; font-weight: bold; }
+        body { font-family: Arial; text-align: center; padding: 20px; background: #0f0f0f; color: white; }
+        img { width: 180px; margin: 10px; border: 2px solid #444; }
+        .missing { border-color: red; }
     </style>
 </head>
 <body>
-    <h1>ReallyWorld — GitHub Pages версия</h1>
-    <p>Проверка изображений:</p>
+    <h1>ReallyWorld — Проверка GitHub Pages</h1>
     
-    <div>
-        <img src="images/chest.png" alt="chest" onerror="this.classList.add('missing'); this.alt='❌ chest.png'">
-        <img src="images/god2.png" alt="god2" onerror="this.classList.add('missing'); this.alt='❌ god2.png'">
-        <img src="images/IMPERATOR.png" alt="IMPERATOR" onerror="this.classList.add('missing'); this.alt='❌ IMPERATOR.png'">
-        <img src="images/HELPER.png" alt="HELPER" onerror="this.classList.add('missing'); this.alt='❌ HELPER.png'">
-        <img src="images/DRAGON.png" alt="DRAGON" onerror="this.classList.add('missing'); this.alt='❌ DRAGON.png'">
-    </div>
+    <h2>Проверка изображений:</h2>
+    <img src="images/chest.png" onerror="this.classList.add('missing'); this.alt='❌ chest.png'">
+    <img src="images/god2.png" onerror="this.classList.add('missing'); this.alt='❌ god2.png'">
+    <img src="images/IMPERATOR.png" onerror="this.classList.add('missing'); this.alt='❌ IMPERATOR.png'">
+    <img src="images/HELPER.png" onerror="this.classList.add('missing'); this.alt='❌ HELPER.png'">
+    <img src="images/DRAGON.png" onerror="this.classList.add('missing'); this.alt='❌ DRAGON.png'">
 
-    <p>Если картинки красные с ❌ — значит их нет в папке <strong>images/</strong></p>
-
-    <script>
-        console.log("✅ Страница загружена");
-    </script>
+    <p>Если видишь ❌ — папка images/ не загружена на GitHub.</p>
 </body>
 </html>
