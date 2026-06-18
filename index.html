@@ -3,103 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReallyWorld - Начало новой эры</title>
-    <meta name="description" content="ReallyWorld Minecraft сервер">
-    
-    <!-- Стили -->
-    <link rel="stylesheet" href="releases/v5.10.0/css/all.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/media-queries.min.css">
-    
+    <title>ReallyWorld</title>
     <style>
-        .tab-content, .tab-pane { display: none; }
-        .tab-content.active, .tab-pane.active, .show { display: block !important; }
-        img { max-width: 100%; height: auto; display: block; }
-        .nav-link.active, .tab-button.active { color: #ffd700; border-bottom: 3px solid #ffd700; }
+        body { font-family: Arial; text-align: center; padding: 20px; }
+        img { max-width: 300px; margin: 10px; border: 2px solid #ccc; }
+        .missing { color: red; font-weight: bold; }
     </style>
 </head>
 <body>
+    <h1>ReallyWorld — GitHub Pages версия</h1>
+    <p>Проверка изображений:</p>
+    
+    <div>
+        <img src="images/chest.png" alt="chest" onerror="this.classList.add('missing'); this.alt='❌ chest.png'">
+        <img src="images/god2.png" alt="god2" onerror="this.classList.add('missing'); this.alt='❌ god2.png'">
+        <img src="images/IMPERATOR.png" alt="IMPERATOR" onerror="this.classList.add('missing'); this.alt='❌ IMPERATOR.png'">
+        <img src="images/HELPER.png" alt="HELPER" onerror="this.classList.add('missing'); this.alt='❌ HELPER.png'">
+        <img src="images/DRAGON.png" alt="DRAGON" onerror="this.classList.add('missing'); this.alt='❌ DRAGON.png'">
+    </div>
 
-    <!-- HEADER -->
-    <header>
-        <div class="top-bar">
-            <nav>
-                <a href="#" class="tab-button active" data-tab="home">Главная</a>
-                <a href="#" class="tab-button" data-tab="donate">Донат</a>
-                <a href="#" class="tab-button" data-tab="rules">Правила</a>
-                <a href="#" class="tab-button" data-tab="forum">Форум</a>
-                <a href="#" class="tab-button" data-tab="stats">Статистика</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main>
-        <!-- Баннер -->
-        <section id="home" class="tab-content active">
-            <div class="hero">
-                <img src="images/bg-hero.jpg" alt="ReallyWorld" style="width:100%">
-                <div class="hero-text">
-                    <h1>REALLYWORLD</h1>
-                    <h2>НАЧАЛО НОВОЙ ЭРЫ</h2>
-                    <button onclick="document.getElementById('donate').scrollIntoView()">Играть</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Магазин привилегий -->
-        <section id="donate" class="tab-content">
-            <h2>Магазин привилегий</h2>
-            <div class="shop-grid">
-                <img src="images/chest.png" alt="Chest" onerror="this.style.display='none'">
-                <img src="images/god2.png" alt="God" onerror="this.style.display='none'">
-                <img src="images/IMPERATOR.png" alt="Imperator" onerror="this.style.display='none'">
-                <img src="images/HELPER.png" alt="Helper" onerror="this.style.display='none'">
-                <img src="images/DRAGON.png" alt="Dragon" onerror="this.style.display='none'">
-                <!-- Добавь остальные изображения по аналогии -->
-            </div>
-        </section>
-
-        <!-- Другие вкладки -->
-        <section id="rules" class="tab-content">
-            <h2>Правила сервера</h2>
-            <p>Правила будут здесь...</p>
-        </section>
-
-        <!-- Добавь остальные секции по необходимости -->
-    </main>
-
-    <footer>
-        <p>ReallyWorld © 2026 | Сайт для GitHub Pages</p>
-    </footer>
-
-    <!-- Скрипты -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/app.js"></script>
+    <p>Если картинки красные с ❌ — значит их нет в папке <strong>images/</strong></p>
 
     <script>
-        // Фикс для GitHub Pages
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('%cReallyWorld fixed for GitHub Pages', 'color: gold; font-size: 16px');
-
-            // Табы
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
-                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-
-                    this.classList.add('active');
-                    const tabId = this.getAttribute('data-tab');
-                    const target = document.getElementById(tabId);
-                    if (target) target.classList.add('active');
-                });
-            });
-
-            // Отключаем запросы к серверу
-            if (typeof monitor !== 'undefined') monitor = function(){};
-        });
+        console.log("✅ Страница загружена");
     </script>
 </body>
 </html>
